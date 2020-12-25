@@ -1,0 +1,548 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== ШРИФТЫ ===========================================================================================
+@import "fonts";
+// ==== // ШРИФТЫ ===========================================================================================
+
+// ==== ПЕРЕМЕННЫЕ ===========================================================================================
+@import "vars"; 
+// ==== // ПЕРЕМЕННЫЕ ===========================================================================================
+
+
+// ==== НОРМАЛАЙЗ ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<МИКСИНЫ>===============================================================================================
+@import "mixins.scss";
+//</МИКСИНЫ>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== ПЛАГИНЫ ===========================================================================================
+@import "swiper-bundle"; 
+//@import "drift-basic";
+// ==== // ПЛАГИНЫ ===========================================================================================
+
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+@import "forms";
+// ==== НАЧАЛЬНЫЕ САТИЛИ ФОРМЫ ===========================================================================================
+
+// ==== BORDER ===========================================================================================
+@import "burger";
+// ==== BORDER ===========================================================================================
+
+// ==== POPUP ===========================================================================================
+//@import "popup";
+// ==== // POPUP ===========================================================================================
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 10px;
+}
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	font-size: 1.8rem;
+	letter-spacing: 0.028em;
+	opacity: 0;
+	transition: opacity .8s ease;
+
+	&.lock {
+		overflow: hidden;
+	}
+
+	&.is-load {
+		opacity: 1;
+	}
+
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-weight: inherit;
+// 	font-size: inherit;
+// }
+
+._puls-decor {
+    background: rgb(66, 39, 185);
+    border-radius: 50%;
+    animation: pulsAnim 0.7s ease-out forwards;
+}
+
+@keyframes pulsAnim {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+        background: #fff;
+        opacity: 0;
+    }
+}
+
+.center {
+	text-align: center;
+}
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&.loaded {
+	}
+}
+
+
+.page {
+	flex: 1 1 auto;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+.logo {
+	max-width: 163px;
+	width: 100%;
+
+	& img {
+		width: 100%;
+	}
+}
+
+
+// === title ========================================================================
+.title-1 {
+
+}
+.title-2 {
+	font-weight: bold;
+	font-size: 52px;
+	line-height: 1.21em;
+	letter-spacing: 0.028em;
+	color: $titleCOlor2;
+	margin-top: 0;
+
+	@media (max-width: $md3+px) {
+		font-size: 38px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 26px;
+	}
+}
+
+.title-3 {
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 1.22em;
+	letter-spacing: 0.028em;
+	color: $titleCOlor2;
+	margin-top: 0;
+}
+
+.title-4 {
+	margin-top: 0;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 1.21em;
+	letter-spacing: 0.028em;
+	color: $titleCOlor2;
+}
+
+.title-5 {
+	margin-top: 0;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.21em;
+	letter-spacing: 0.028em;
+	color: $titleCOlor2;
+
+}
+
+.title-6 {
+	margin-top: 0;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1.2em;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.028em;
+	color: $titleCOlor2;
+}
+
+.suptitle {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.19em;
+	letter-spacing: 0.08em;
+	color: $mainColorBlue;
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	text-transform: uppercase;
+
+	&:before {
+		content: '';
+		width: 40px;
+		height: 4px;
+		margin-right: 12px;
+		opacity: 0.7;
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,194299+25,194299+100&0+0,1+100 */
+		background: -moz-linear-gradient(left,  rgba(125,185,232,0) 0%, rgba(25,66,153,0.25) 25%, rgba(25,66,153,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left,  rgba(125,185,232,0) 0%,rgba(25,66,153,0.25) 25%,rgba(25,66,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right,  rgba(125,185,232,0) 0%,rgba(25,66,153,0.25) 25%,rgba(25,66,153,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#194299',GradientType=1 ); /* IE6-9 */
+
+	}
+
+	@media (max-width: $md3+px) {
+		font-size: 14px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 9px;
+	}
+}
+
+.text {
+	font-size: 18px;
+	line-height: 1.55em;
+	letter-spacing: 0.014em;
+	color: $textColor;
+}
+// === and title ========================================================================
+
+.link-arrow {
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.21em;
+    letter-spacing: 0.028em;
+    color: $decorColorYellow;
+    transition: all .2s ease;
+
+    @media (min-width: 992px) {
+        &:hover {
+            opacity: 0.8;
+
+            &:after {
+                transform: translateX(4px);
+            }
+        }
+    }
+
+    &:after {
+        font-family: 'icomoon' !important;
+        content: "\e904";
+        font-size: 1em;
+        color: inherit;
+        margin-left: 12px;
+        font-weight: 400;
+        transition: all .3s ease;
+    }
+}
+
+
+// === btn ========================================================================
+.btn-default {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #A8A9B0;
+    border-radius: 5.555em;
+    min-height: 3.3333em;
+    min-width: 8.555em;
+    padding: 0.555em 1.111em;
+    color: $titleCOlor2;
+    transition: all .2s ease;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.1em;
+    letter-spacing: 0.014em;
+
+    &.yellow {
+        background-color: $decorColorYellow;
+        border: none;
+	}
+	
+	&.blue {
+		background-color: $mainColorBlue;
+		border: none;
+		color: #fff;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background-color: $decorColorYellow;
+				color: $titleCOlor2;
+			}
+		}
+	}
+
+    &.arrow {
+        &:after {
+            font-family: 'icomoon' !important;
+            content: "\e904";
+            color: inherit;
+            transition: all .3s ease;
+            margin-left: 12px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+	}
+	
+	&.chewron {
+		&:after {
+		font-family: 'icomoon' !important;
+		content: "\e907";
+		color: inherit;
+		transition: all .3s ease;
+		margin-left: 12px;
+		font-weight: 400;
+		font-size: 14px;
+		transform: rotate(-90deg);
+        }
+	}
+
+	&.width-full {
+		width: 100%;
+	}
+
+    @media (min-width: 992px) {
+        &:hover {
+            background-color: $mainColorBlue;
+            color: #fff;
+            
+            &:after {
+                transform: translateX(5px);
+			}
+			
+			&.chewron:after {
+				transform: rotate(-90deg) translateY(5px);
+			}
+        }
+    }
+
+}
+
+
+button.btn-default {
+	
+}
+
+// === and btn ========================================================================
+
+.input {
+
+}
+
+.textarea {
+
+}
+
+.link {
+
+}
+
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	font-size: 18px;
+	line-height: 1.56em;
+	letter-spacing: 0.014em;
+	color: $textColor;
+
+	& h1 {}
+	& h2 {
+
+	}
+	& h3 {}
+	& h4 {}
+
+	& h5 {
+
+	}
+	& h6 {}
+
+	& p {
+		font-size: 18px;
+		line-height: 1.56em;
+		letter-spacing: 0.014em;
+		color: $textColor;
+		margin-bottom: 1.333em;
+	}
+
+	& ul {
+
+	}
+
+	& ol {}
+
+	& figure {}
+
+	& strong {
+		font-weight: 600;
+	}
+
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+
+.img-box {
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: $mainColorBlue;
+        border-radius: 12px;
+        clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+    }
+
+    & > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: #E8E8EB;
+        border-radius: 12px;
+        clip-path: polygon(0 0, 94% 0, 100% 100%, 0% 100%);
+        overflow: hidden;
+    }
+}
+
+
+// ==== GLOBAL =====================================================
+@import "_global";
+// ==== AND GLOBAL =====================================================
+
+// ==== BLOCKS =====================================================
+@import "#header";
+@import "#footer";
+
+@import "../blocks/head/head";
+@import "../blocks/card-mini/card-mini";
+@import "../blocks/action-block/action-block";
+
+// ==== BLOCKS =====================================================
+
+
+// ==== PAGES =====================================================
+
+	// ==== HOME =====================================================
+	@import "#home";
+	// ==== AND HOME =====================================================
+	
+// ==== AND PAGES =====================================================
+
+
+

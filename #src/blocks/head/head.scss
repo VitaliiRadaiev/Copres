@@ -1,0 +1,14 @@
+.head {
+
+    &__suptitle {
+        margin-bottom: 1.5em;
+    }
+
+    &__title {
+        margin-bottom: 0.69em;
+    }
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 25px !important;
+    }
+}
