@@ -1,0 +1,374 @@
+.footer {
+    background: linear-gradient(132.12deg, #487FF4 -22.87%, rgba(72, 127, 244, 0) 83.62%), #194299;
+    position: relative;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: url(../img/photo/footer-decor.png) center no-repeat;
+        background-size: cover;
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        padding-top: 100px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 50px;
+        }
+    }
+
+    &__row {
+        display: flex;
+
+        &_1 {
+            margin-bottom: 66px;
+            //flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media (max-width: 1200px) {
+                flex-wrap: wrap;
+            }
+
+            @media (max-width: $md3+px) {
+                display: block;
+                text-align: center;
+            }
+
+            & .footer__column {
+                margin-bottom: 30px;
+                flex: 1 1 auto;
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+                @media (max-width: $md3+px) {
+                    margin-right: 0 !important;
+                    max-width: none;
+                    min-width: auto;
+                    margin-bottom: 30px;
+                }
+
+            }
+            & .footer__column_1 {
+                //flex: 1 1 clamp(260px, auto, 400px);
+                max-width: 370px;
+            }
+            & .footer__column_2 {
+               // flex: 1 1 clamp(180px, auto, 275px);
+                min-width: 180px;
+                max-width: 245px;
+            }
+            & .footer__column_3 {
+               // flex: 1 1 clamp(180px, auto, 286px);
+                min-width: 180px;
+                max-width: 256px;
+            }
+            & .footer__column_4 {
+               // flex: 1 1 clamp(280px, auto, 330px);
+                min-width: 280px;
+                max-width: 330px;
+            }
+        }
+
+        &_2 {
+            border-top: 1px solid rgba(#fff, 0.2);
+            min-height: 148px;
+            padding: 15px 0;
+            align-items: center;
+
+            @media (max-width: $md2+px) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            & .footer__column {}
+            & .footer__column_1 {
+                flex: 1 1 auto;
+                max-width: 300px;
+                margin-right: 96px;
+
+                color: #fff;
+
+                @media (max-width: $md2+px) {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+            & .footer__column_2 {
+                flex: 1 1 auto;
+                max-width: 440px;
+                margin-right: 40px;
+
+                @media (max-width: $md2+px) {
+                   margin-right: 0;
+                   margin-bottom: 15px;
+                }
+            }
+            & .footer__column_3 {
+                flex: 0 0 40px;
+                margin-left: auto;
+
+                @media (max-width: $md2+px) {
+                    margin-left: 0;
+                }
+
+                & .icon-in {
+                    color: #fff;
+                    font-size: 30px;
+                    transition: all .2s ease;
+
+                    @media (min-width: 992px) {
+                        &:hover {
+                            color: $decorColorYellow;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    &__column {
+
+        &_1 {
+        }
+
+        &_2 {
+        }
+
+        &_3 {
+        }
+
+        &_4 {
+        }
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 34px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        color: #fff;
+        max-width: 300px;
+        margin-bottom: 40px;
+        line-height: 28px;
+
+        @media (max-width: $md3+px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__logo {
+
+        &.logo {
+            max-width: 250px;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__list {
+        & > li {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__link {
+        color: #fff;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__info-list {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+        & > li {
+            text-align: left;
+        }
+    }
+
+    &__bottom {
+        background:rgba( #121B2F, 0.3);
+        position: relative;
+        z-index: 3;
+    }
+    &__bottom-body {
+        min-height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 15px 15;
+
+        & .link-arrow {
+            letter-spacing: 0.08em;
+
+            @media (max-width: $md3+px) {
+               margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: $md3+px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__bottom-list {
+        display: flex;
+
+        @media (max-width: $md3+px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        & > li {
+            margin-right: 40px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.014em;
+            color :rgba(#fff, 0.7);
+
+            @media (max-width: $md3+px) {
+                font-size: 14px;
+                margin-right: 20px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            & > a {
+                color: rgba(#fff, 0.7);
+                transition: all .2s ease;
+
+                @media (min-width: 992px) {
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.info-list {
+    & > li {
+        margin-bottom: 29px;
+        display: flex;
+    }
+    &__icon {
+        min-width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgba(#fff, 0.2);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+        
+        & > span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 28px;
+            height: 28px;
+
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+    }
+
+    &__text-wrap {
+    }
+
+    &__text {
+        color: #fff;
+        line-height: 28px;
+    }
+
+    &__small-text {
+        opacity: 0.6;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.014em;
+        color: #FFFFFF;
+    }
+}
+
+
+
+.form-send-email {
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        background: rgba(#fff, 0.2);
+        border-radius: 100px;
+        overflow: hidden;
+    }
+
+    &__input {
+        flex: 1 1 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 10px 24px;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.014em;
+        color: #FFFFFF;
+        min-height: 48px;
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.014em;
+            color: rgba(#fff, 0.7);
+        }
+    }
+
+    &__btn {
+        &.btn-default {
+            font-size: 16px;
+            min-width: 154px;
+            min-height: 48px;
+
+            @media (max-width: $md4+px) {
+                font-size: 14px;
+                min-width: 124px;
+            }
+        }
+    }
+}
+
+
