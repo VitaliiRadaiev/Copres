@@ -1,0 +1,44 @@
+.cta-block {
+    background: linear-gradient(132.12deg, #487FF4 -22.87%, rgba(72, 127, 244, 0) 83.62%), #194299;
+    border-radius: 12px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 80px 36px;
+    margin-bottom: 50px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/photo/cta-block-bg-decor.png);
+        background-repeat: no-repeat;
+        background-position: right 95%;
+        z-index: 1;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        margin-bottom: 36px;
+        color: #fff;
+    }
+
+    &__text {
+        opacity: 0.8;
+        margin-bottom: 60px;
+        letter-spacing: 0.014em;
+        line-height: 1.56em;
+    }
+
+    & .btn-default {
+        width: 100%;
+        max-width: 14.9444em;
+    }
+}

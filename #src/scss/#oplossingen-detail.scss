@@ -1,0 +1,6 @@
+.oplossingen-detail {
+    & .hero {
+        margin-bottom: 160px;
+        @include mb();
+    }
+}

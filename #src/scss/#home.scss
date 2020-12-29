@@ -221,12 +221,6 @@
         min-width: 0;
         max-height: 680px;
         min-height: 400px;
-        background-color: $mainColorBlack;
-        background-image: url(../img/photo/solution-list-decor.png);
-        background-repeat: no-repeat;
-        background-position: right 95%;
-        border-radius: 12px;
-        padding: 28px 0;
         margin-top: 3px;
 
         @media (max-width: 1200px) {
@@ -378,6 +372,61 @@
 
 
 .thems-solution {
+    background-color: $mainColorBlack;
+    background-image: url(../img/photo/solution-list-decor.png);
+    background-repeat: no-repeat;
+    background-position: right 95%;
+    border-radius: 12px;
+    padding: 28px 0;
+
+    & li {
+        color: #fff;
+        padding: 0 20px;
+        position: relative;
+        height: auto;
+        cursor: pointer;
+        margin-bottom: 48px;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 0;
+            height: 80%;
+            width: 5px;
+            background: linear-gradient(144.06deg, #E3ECFF -73.06%, rgba(227, 236, 255, 0) 71.3%), #487FF4;
+            border-radius: 8px 0px 0px 8px;
+            transition: all .2s ease;
+            opacity: 0;
+            transform: translateY(-50%);
+        }
+
+        &.active {
+        
+            &:before {
+                opacity: 1;
+            }
+
+            & .thems-solution__item {
+                background-color: #fff;
+                color: $titleCOlor2;
+            }
+
+            & .thems-solution__circle {
+                background-color: #FAEFCD;
+
+                &:before {
+                   background: linear-gradient(144.38deg, #FAEFCD -85.56%, rgba(250, 239, 205, 0) 90.63%), #F6C223;
+                }
+            }
+        
+        }
+    }
+
 
     &__item {
         display: flex;
@@ -387,6 +436,13 @@
         border-radius: 100px;
         background: transparent;
         transition: all .2s ease;
+        color: #fff;
+
+        @media (min-width: 992px) {
+            &:hover {
+                background: rgba(#fff ,0.1);
+            }
+        }
     }
 
     &__circle {

@@ -95,6 +95,7 @@ body {
 	color: $textColor;
 	font-size: 1.8rem;
 	letter-spacing: 0.028em;
+	line-height: 1.2em;
 	opacity: 0;
 	transition: opacity .8s ease;
 
@@ -145,6 +146,12 @@ img {
 // 	font-weight: inherit;
 // 	font-size: inherit;
 // }
+
+hr {
+	display: block;
+	height: 1px;
+	background: rgba(#A8A9B0, 0.4);
+}
 
 ._puls-decor {
     background: rgb(66, 39, 185);
@@ -372,7 +379,7 @@ img {
     border-radius: 5.555em;
     min-height: 3.3333em;
     min-width: 8.555em;
-    padding: 0.555em 1.111em;
+    padding: 0.555em 1.611em;
     color: $titleCOlor2;
     transition: all .2s ease;
     font-weight: 600;
@@ -475,8 +482,27 @@ button.btn-default {
 	& h2 {
 
 	}
-	& h3 {}
-	& h4 {}
+	& h3 {
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 1.22em;
+		letter-spacing: 0.028em;
+		color: $titleCOlor2;
+		margin-top: 0;
+		margin-bottom: 1em;
+		@media (max-width: $md4+px) {
+			font-size: 26px;
+		}
+	}
+	& h4 {
+		margin-top: 0;
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 1.21em;
+		letter-spacing: 0.028em;
+		color: $titleCOlor2;
+		margin-bottom: 1.286em;
+	}
 
 	& h5 {
 
@@ -489,6 +515,16 @@ button.btn-default {
 		letter-spacing: 0.014em;
 		color: $textColor;
 		margin-bottom: 1.333em;
+
+		&.quote {
+			background: #FAEFCD;
+			border-radius: 12px;
+			font-weight: 600;
+			color: $mainColorBlack;
+			padding: 1.556em;
+			margin-bottom: 1.7em;
+			letter-spacing: 0.01em;
+		}
 	}
 
 	& ul {
@@ -553,6 +589,8 @@ button.btn-default {
 @import "../blocks/hero/hero";
 @import "../blocks/introductory-block/introductory-block";
 @import "../blocks/card/card";
+@import "../blocks/cta-block/cta-block";
+@import "../blocks/detail-info-block/detail-info-block";
 
 // ==== BLOCKS =====================================================
 
@@ -566,6 +604,10 @@ button.btn-default {
 	// ==== OPLOSSINGEN =====================================================
 	@import "#oplossingen";
 	// ==== AND OPLOSSINGEN =====================================================
+	
+	// ==== OPLOSSINGEN DETAIL =====================================================
+	@import "#oplossingen-detail";
+	// ==== AND OPLOSSINGEN DETAIL =====================================================
 	
 // ==== AND PAGES =====================================================
 

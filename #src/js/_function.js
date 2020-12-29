@@ -95,6 +95,11 @@ function spollerInit() {
 	if (spollers.length > 0) {
 		for (let index = 0; index < spollers.length; index++) {
 			const spoller = spollers[index];
+
+			if(spoller.classList.contains('_active')) {
+				_slideDown(spoller.nextElementSibling);
+			}
+
 			spoller.addEventListener("click", function (e) {
 				e.preventDefault();
 				if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
@@ -115,6 +120,7 @@ function spollerInit() {
 					}
 				}
 				spoller.classList.toggle('_active');
+				spoller.parentElement.classList.toggle('_active');
 				_slideToggle(spoller.nextElementSibling);
 			});
 		}
