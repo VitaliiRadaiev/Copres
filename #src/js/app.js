@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
 	document.body.classList.add('is-load');
-
+	document.querySelector('.promo__img video').play();
 	@@include('_function.js');
 	@@include('da.js');
 	@@include('burger.js');
@@ -60,6 +60,18 @@ $(document).ready(function () {
 	});
 
 	// === // Проверка, поддержка браузером формата webp ==================================================================
+
+		// ==== ADD PADDING-TOP ================================
+		{
+			let wrapper = document.querySelector('.wrapper');
+			if (wrapper) {
+				let headerHeight = document.querySelector('.header').clientHeight;
+				if (wrapper.classList.contains('_padding-top')) {
+					wrapper.style.paddingTop = headerHeight + 'px';
+				}
+			}
+		}
+		// ==== AND ADD PADDING-TOP ================================
 
 	// == puls effect ==========================================
 	{

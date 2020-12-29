@@ -12,3 +12,21 @@
         })
     }
 }
+
+{
+    let header = document.querySelector('.header');
+    let topLine = document.querySelector('.header__top-line');
+        if(header) {
+            window.addEventListener('scroll', () => {
+                if(window.pageYOffset > 300) {
+                    header.style.top = -topLine.clientHeight + 'px';
+                    header.classList.add('_scroll');
+                } else {
+                    header.style.top = '0px';
+                    header.classList.remove('_scroll');
+                }
+                
+            })
+        }
+    
+}

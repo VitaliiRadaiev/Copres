@@ -311,6 +311,14 @@
     &__text {
         color: #fff;
         line-height: 28px;
+
+        & > a {
+            color: #fff;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     &__small-text {

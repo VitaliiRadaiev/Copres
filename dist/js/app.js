@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
 	document.body.classList.add('is-load');
-
+	document.querySelector('.promo__img video').play();
 	//SlideToggle
 let _slideUp = (target, duration = 500) => {
 	target.style.transitionProperty = 'height, margin, padding';
@@ -784,6 +784,18 @@ function selects_update_all() {
 
 	// === // Проверка, поддержка браузером формата webp ==================================================================
 
+		// ==== ADD PADDING-TOP ================================
+		{
+			let wrapper = document.querySelector('.wrapper');
+			if (wrapper) {
+				let headerHeight = document.querySelector('.header').clientHeight;
+				if (wrapper.classList.contains('_padding-top')) {
+					wrapper.style.paddingTop = headerHeight + 'px';
+				}
+			}
+		}
+		// ==== AND ADD PADDING-TOP ================================
+
 	// == puls effect ==========================================
 	{
 		let puls = document.querySelectorAll('._puls');
@@ -833,6 +845,24 @@ function selects_update_all() {
             })
         })
     }
+}
+
+{
+    let header = document.querySelector('.header');
+    let topLine = document.querySelector('.header__top-line');
+        if(header) {
+            window.addEventListener('scroll', () => {
+                if(window.pageYOffset > 300) {
+                    header.style.top = -topLine.clientHeight + 'px';
+                    header.classList.add('_scroll');
+                } else {
+                    header.style.top = '0px';
+                    header.classList.remove('_scroll');
+                }
+                
+            })
+        }
+    
 };
 	{
     let sliderProduct = document.querySelector('.solution-block');
