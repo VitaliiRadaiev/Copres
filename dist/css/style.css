@@ -3135,11 +3135,25 @@ img {
   background: linear-gradient(144.38deg, #FAEFCD -85.56%, rgba(250, 239, 205, 0) 90.63%), #F6C223;
 }
 
+.card__circle > span > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.2em;
+  width: 5.2em;
+  position: relative;
+}
+
 .card__circle > span img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: none;
-     object-fit: none;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .card__text-wrap {

@@ -3,9 +3,10 @@
     if (testimonials) {
         let testimonialsThumbs;
         testimonialsThumbs = new Swiper(testimonials.querySelector('.testimonials__customers-slider > .swiper-container'), { 
-           // freeMode: true,
+            
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
+            //slideToClickedSlide: true,
             navigation: {
                 nextEl: testimonials.querySelector('.testimonials__customers-slider > .customers-slider__btn-next'),
                 prevEl: testimonials.querySelector('.testimonials__customers-slider > .customers-slider__btn-prev'),
@@ -14,19 +15,23 @@
                 320: {
                     spaceBetween: 20,
                     slidesPerView: 1,
+                    freeMode: false,
                 },
                 576: {
                     slidesPerView: 2,
                     spaceBetween: 20,
+                    freeMode: true,
                 },
                 768: {
                     slidesPerView: 3,
                     spaceBetween: 20,
+                    freeMode: true,
                 },
 
                 1024: {
                     spaceBetween: 38,
                     slidesPerView: 4,
+                    freeMode: true,
                 },
             },  
 
@@ -53,7 +58,7 @@
             testimonialsThumbs.controller.control = testimonialsText;
             testimonialsText.thumbs.swiper = null;
         } 
-        testimonialsText.controller.control = testimonialsThumbs;
+        // testimonialsText.controller.control = testimonialsThumbs;
     }
 
 }
