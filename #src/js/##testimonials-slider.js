@@ -7,10 +7,7 @@
             watchSlidesVisibility: true,
             watchSlidesProgress: true,
             //slideToClickedSlide: true,
-            navigation: {
-                nextEl: testimonials.querySelector('.testimonials__customers-slider > .customers-slider__btn-next'),
-                prevEl: testimonials.querySelector('.testimonials__customers-slider > .customers-slider__btn-prev'),
-            },
+
             breakpoints: {
                 320: {
                     spaceBetween: 20,
@@ -51,6 +48,10 @@
             preloadImages: false,
             autoplay: {
                 delay: 5000,
+            },
+            navigation: {
+                nextEl: testimonials.querySelector('.testimonials__customers-slider > .customers-slider__btn-next'),
+                prevEl: testimonials.querySelector('.testimonials__customers-slider > .customers-slider__btn-prev'),
             },
         });
 
