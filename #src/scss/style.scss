@@ -214,6 +214,20 @@ img {
 // === title ========================================================================
 .title-1 {
 
+	font-weight: bold;
+	font-size: 68px;
+	line-height: 1.205em;
+	letter-spacing: 0.028em;
+	color: $titleColor1;
+
+	@media (max-width: $md3+px) {
+		font-size: 48px;
+	}
+
+	@media (max-width: $md4+px) {
+		font-size: 36px;
+	}
+
 }
 .title-2 {
 	font-weight: bold;
@@ -239,6 +253,10 @@ img {
 	letter-spacing: 0.028em;
 	color: $titleCOlor2;
 	margin-top: 0;
+
+	@media (max-width: $md4+px) {
+		font-size: 26px;
+	}
 }
 
 .title-4 {
@@ -532,6 +550,9 @@ button.btn-default {
 @import "../blocks/head/head";
 @import "../blocks/card-mini/card-mini";
 @import "../blocks/action-block/action-block";
+@import "../blocks/hero/hero";
+@import "../blocks/introductory-block/introductory-block";
+@import "../blocks/card/card";
 
 // ==== BLOCKS =====================================================
 
@@ -541,6 +562,10 @@ button.btn-default {
 	// ==== HOME =====================================================
 	@import "#home";
 	// ==== AND HOME =====================================================
+	
+	// ==== OPLOSSINGEN =====================================================
+	@import "#oplossingen";
+	// ==== AND OPLOSSINGEN =====================================================
 	
 // ==== AND PAGES =====================================================
 

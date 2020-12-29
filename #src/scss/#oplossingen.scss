@@ -1,0 +1,30 @@
+.oplossingen {
+    &__content {
+        margin-bottom: 41px;
+
+        @media (max-width: $md3+px) {
+            padding-top: 50px;
+        }
+    }
+
+    &__list {
+        & > li {
+            padding-bottom: 120px;
+
+            @media (max-width: $md3+px) {
+                padding-bottom: 80px;
+            }
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(#A8A9B0, 0.4);
+                margin-bottom: 167px;
+
+                @media (max-width: $md3+px) {
+                    margin-bottom: 100px;
+                }
+            }
+
+
+        }
+    }
+}

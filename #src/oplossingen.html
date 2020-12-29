@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Copres"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper oplossingen _padding-top">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+                @@include('blocks/hero/_hero.html',{
+                    "imgSrc": 'img/photo/hero-bg01.jpg',
+                    "title": 'Oplossingen',
+                    "breadcrumb": ['Home'],
+                    "breadcrumbLast": 'Oplossingen',
+                })
+
+                <section class="introductory-block">
+                    <div class="container">
+                        @@include('blocks/head/_head.html',{
+                            "parentClass": 'introductory-block__head',
+                            "suptitle": 'Subtitle (Oplossingen)',
+                            "title": 'Titel (Oplossingen)',
+                        })
+                        <div class="introductory-block__text text-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, eros, suscipit dapibus sem tempus. Quis vel, eros, dolor vulputate mauris fermentum, phasellus facilisi. Eget nam eu in proin arcu urna, gravida eu. Facilisis adipiscing in congue nisl quis.
+                            </p>
+                        </div>
+                        <a href="#" class="introductory-block__contact-btn btn-default">Contact</a>
+                        <a href="#" class="introductory-block__offerte-btn btn-default blue">Offerte</a>
+                    </div>
+                </section>
+                <section class="oplossingen__content">
+                    <div class="container">
+                        <ul class="oplossingen__list">
+                            <li>
+                                @@include('blocks/card/_card.html',{
+                                    "iconSrc": 'img/icons/card01.svg',
+                                    "title": 'Titel (Oplossing 1)',
+                                    "vertical": 'vertical',
+                                })
+                            </li>
+                            <li>
+                                @@include('blocks/card/_card.html',{
+                                    "iconSrc": 'img/icons/card02.svg',
+                                    "title": 'Titel (Oplossing 2)',
+                                    "vertical": 'vertical',
+                                })
+                            </li>
+                            <li>
+                                @@include('blocks/card/_card.html',{
+                                    "iconSrc": 'img/icons/card03.svg',
+                                    "title": 'Titel (Oplossing 4)',
+                                    "vertical": 'vertical',
+                                })
+                            </li>
+                        </ul>
+                    </div>
+                </section>               
+            </main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_js.html',{})
+	</body>
+</html>

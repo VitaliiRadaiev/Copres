@@ -1,0 +1,44 @@
+.introductory-block {
+    text-align: center;
+    margin-bottom: 194px;
+    @include mb();
+    text-align: center;
+    &__head {
+        margin-bottom: 36px;
+    }
+    &__text {
+        max-width: 850px;
+        margin: 0 auto 60px;
+
+
+        @media (max-width: $md3+px) {
+            &.text-content {
+                font-size: 16px;
+                & p {
+                    font-size: 16px;
+
+                }
+            }
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 35px;
+        }
+    }
+    & a.btn-default {
+        margin-bottom: 0.888em;
+
+        @media (max-width: $md4+px) {
+            font-size: 12.8px;
+        }
+    }
+
+    &__contact-btn {
+        margin-right: 2.22222em;
+    }
+    &__offerte-btn {
+        &.btn-default {
+            min-width: 11.166em;
+        }
+    }
+}

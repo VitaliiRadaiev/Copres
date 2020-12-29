@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
 	document.body.classList.add('is-load');
-	document.querySelector('.promo__img video').play();
+	let video = document.querySelector('.promo__img video');
+	if(video) {
+		video.play();
+	}
 	//SlideToggle
 let _slideUp = (target, duration = 500) => {
 	target.style.transitionProperty = 'height, margin, padding';

@@ -1619,6 +1619,14 @@ img {
   width: 100%;
 }
 
+.title-1 {
+  font-weight: bold;
+  font-size: 68px;
+  line-height: 1.205em;
+  letter-spacing: 0.028em;
+  color: #fff;
+}
+
 .title-2 {
   font-weight: bold;
   font-size: 52px;
@@ -2889,6 +2897,302 @@ img {
   margin-bottom: 15px;
 }
 
+.hero {
+  position: relative;
+  margin-bottom: 155px;
+}
+
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero__img:before {
+  position: absolute;
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #121B2F;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 83%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 83%);
+}
+
+.hero__img span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 81.5%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 81.5%, 0% 100%);
+  z-index: 2;
+}
+
+.hero__img span:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(18, 27, 47, 0.3);
+}
+
+.hero__body {
+  position: relative;
+  z-index: 2;
+  min-height: 600px;
+  text-align: center;
+  padding: 58px 15px 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__title {
+  position: relative;
+  margin-bottom: 0.9em;
+}
+
+.hero__title:before {
+  position: absolute;
+  content: '';
+  position: absolute;
+  top: 129%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(white));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+}
+
+.hero__text {
+  letter-spacing: 0.014em;
+  color: #FFFFFF;
+  opacity: 0.8;
+  max-width: 850px;
+  margin: 0 auto 100px;
+  line-height: 1.6em;
+}
+
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.breadcrumb > li {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.187em;
+  letter-spacing: 0.014em;
+  color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.breadcrumb > li:not(:last-child) {
+  margin-right: 17px;
+}
+
+.breadcrumb > li > a {
+  opacity: 0.6;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  color: #FFFFFF;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.breadcrumb > li > a:after {
+  font-family: 'icomoon';
+  content: "\e905";
+  color: inherit;
+  font-size: 1em;
+  margin-left: 21px;
+}
+
+.introductory-block {
+  text-align: center;
+  margin-bottom: 194px;
+  text-align: center;
+}
+
+.introductory-block__head {
+  margin-bottom: 36px;
+}
+
+.introductory-block__text {
+  max-width: 850px;
+  margin: 0 auto 60px;
+}
+
+.introductory-block a.btn-default {
+  margin-bottom: 0.888em;
+}
+
+.introductory-block__contact-btn {
+  margin-right: 2.22222em;
+}
+
+.introductory-block__offerte-btn.btn-default {
+  min-width: 11.166em;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40.31008%;
+          flex: 0 0 40.31008%;
+  margin-right: 60px;
+  height: 440px;
+  position: relative;
+  max-width: 520px;
+}
+
+.card__circle {
+  position: absolute;
+  top: -11%;
+  right: -1px;
+  z-index: 5;
+  font-size: 10px;
+  height: 14em;
+  width: 14em;
+  border-radius: 50%;
+  background: #FAEFCD;
+  -webkit-box-shadow: 0px 12px 40px rgba(25, 26, 50, 0.1);
+          box-shadow: 0px 12px 40px rgba(25, 26, 50, 0.1);
+}
+
+.card__circle > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 10em;
+  width: 10em;
+  border-radius: 50%;
+  background: -o-linear-gradient(305.62deg, #FAEFCD -85.56%, rgba(250, 239, 205, 0) 90.63%), #F6C223;
+  background: linear-gradient(144.38deg, #FAEFCD -85.56%, rgba(250, 239, 205, 0) 90.63%), #F6C223;
+}
+
+.card__circle > span img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.card__text-wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-top: 22px;
+  max-width: 685px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__text-wrap a.btn-default {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.card__title {
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.card__title:before {
+  position: absolute;
+  content: '';
+  top: 157%;
+  left: 0;
+  height: 4px;
+  width: 180px;
+  opacity: 0.7;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7db9e8+0,194299+25,194299+100&0+0,1+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(rgba(125, 185, 232, 0)), color-stop(25%, rgba(25, 66, 153, 0.25)), to(#194299));
+  background: -o-linear-gradient(left, rgba(125, 185, 232, 0) 0%, rgba(25, 66, 153, 0.25) 25%, #194299 100%);
+  background: linear-gradient(to right, rgba(125, 185, 232, 0) 0%, rgba(25, 66, 153, 0.25) 25%, #194299 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#194299',GradientType=1 );
+  /* IE6-9 */
+}
+
+.card__text {
+  margin-bottom: 40px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .promo {
   position: relative;
   margin-bottom: 148px;
@@ -3547,6 +3851,19 @@ img {
   height: 48px;
 }
 
+.oplossingen__content {
+  margin-bottom: 41px;
+}
+
+.oplossingen__list > li {
+  padding-bottom: 120px;
+}
+
+.oplossingen__list > li:not(:last-child) {
+  border-bottom: 1px solid rgba(168, 169, 176, 0.4);
+  margin-bottom: 167px;
+}
+
 @media (min-width: 576px) {
   .customers-slider .swiper-slide.swiper-slide-thumb-active {
     -webkit-box-shadow: inset 0px 0px 15px #F6C223;
@@ -3613,6 +3930,10 @@ img {
 
   .footer__bottom-list > li > a:hover {
     color: #fff;
+  }
+
+  .breadcrumb > li > a:hover {
+    opacity: 1;
   }
 
   .promo__link:hover {
@@ -3807,9 +4128,26 @@ img {
   .footer__row_2 .footer__column_3 {
     margin-left: 0;
   }
+
+  .card {
+    display: block;
+  }
+
+  .card__img {
+    margin-right: 0;
+    margin-bottom: 56px;
+  }
+
+  .card__text-wrap {
+    max-width: none;
+  }
 }
 
 @media (max-width: 767.98px) {
+  .title-1 {
+    font-size: 48px;
+  }
+
   .title-2 {
     font-size: 38px;
   }
@@ -3921,6 +4259,39 @@ img {
             flex: 0 1 100%;
   }
 
+  .hero {
+    margin-bottom: 90px;
+  }
+
+  .hero__body {
+    min-height: 450px;
+  }
+
+  .hero__text {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+
+  .introductory-block {
+    margin-bottom: 90px;
+  }
+
+  .introductory-block__text.text-content {
+    font-size: 16px;
+  }
+
+  .introductory-block__text.text-content p {
+    font-size: 16px;
+  }
+
+  .card__text.text-content {
+    font-size: 16px;
+  }
+
+  .card__text.text-content p {
+    font-size: 16px;
+  }
+
   .promo {
     margin-bottom: 90px;
   }
@@ -3963,6 +4334,18 @@ img {
 
   .about-block__img {
     height: 600px;
+  }
+
+  .oplossingen__content {
+    padding-top: 50px;
+  }
+
+  .oplossingen__list > li {
+    padding-bottom: 80px;
+  }
+
+  .oplossingen__list > li:not(:last-child) {
+    margin-bottom: 100px;
   }
 }
 
@@ -4025,13 +4408,30 @@ img {
     font-size: 12px;
   }
 
+  .card__img {
+    margin-bottom: 25px;
+    height: 370px;
+  }
+
+  .card__circle {
+    font-size: 8px;
+  }
+
   .customers-slider .swiper-slide {
     padding-bottom: 100%;
   }
 }
 
 @media (max-width: 479.98px) {
+  .title-1 {
+    font-size: 36px;
+  }
+
   .title-2 {
+    font-size: 26px;
+  }
+
+  .title-3 {
     font-size: 26px;
   }
 
@@ -4054,6 +4454,30 @@ img {
 
   .form-action {
     padding: 150px 20px 15px 20px;
+  }
+
+  .hero {
+    margin-bottom: 50px;
+  }
+
+  .introductory-block {
+    margin-bottom: 50px;
+  }
+
+  .introductory-block__text {
+    margin-bottom: 35px;
+  }
+
+  .introductory-block a.btn-default {
+    font-size: 12.8px;
+  }
+
+  .card__title {
+    margin-bottom: 35px;
+  }
+
+  .card__text {
+    margin-bottom: 20px;
   }
 
   .promo {

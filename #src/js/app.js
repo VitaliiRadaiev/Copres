@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
 	document.body.classList.add('is-load');
-	document.querySelector('.promo__img video').play();
+	let video = document.querySelector('.promo__img video');
+	if(video) {
+		video.play();
+	}
 	@@include('_function.js');
 	@@include('da.js');
 	@@include('burger.js');
