@@ -38,6 +38,7 @@
         testimonialsText = new Swiper(testimonials.querySelector('.testimonials__text-slider > .swiper-container'), {
             spaceBetween: 0,
             effect: 'fade',
+            loop: true,
             thumbs: {
                 swiper: testimonialsThumbs,
             },
