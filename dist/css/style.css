@@ -4372,6 +4372,7 @@ hr {
   letter-spacing: 0.028em;
   color: #121B2F;
   margin-bottom: 11px;
+  padding-right: 90px;
 }
 
 .review-block__subname {
@@ -4380,6 +4381,7 @@ hr {
   letter-spacing: 0.014em;
   color: #5E5F70;
   opacity: 0.7;
+  padding-right: 90px;
 }
 
 .review-block__control {
@@ -5024,6 +5026,14 @@ hr {
 
   .review-block__img {
     margin-bottom: 36px;
+  }
+
+  .review-block__name {
+    padding-right: 0;
+  }
+
+  .review-block__subname {
+    padding-right: 0;
   }
 
   .review-block__control {
