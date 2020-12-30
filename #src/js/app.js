@@ -115,6 +115,7 @@ $(document).ready(function () {
 	@@include('#header.js');
 	@@include('##solution-slider.js');
 	@@include('##testimonials-slider.js');
+	@@include('##review-block.js');
 	
 	@@include('../blocks/action-block/action-block.js');
 

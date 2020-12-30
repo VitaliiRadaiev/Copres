@@ -23,7 +23,7 @@
     }
     &__content {
         flex: 1 1 auto;
-
+        min-width: 0;
         & hr {
             margin-bottom: 120px;
 

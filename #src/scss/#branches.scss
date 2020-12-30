@@ -1,0 +1,33 @@
+.branches {
+    &__content {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -20px;
+
+        @media (max-width: $md3+px) {
+            display: block;
+        }
+
+        & > li {
+            padding: 0 20px;
+            flex: 0 1 50%;
+            margin-bottom: 140px;
+            max-width: 520px;
+
+            @media (max-width: $md3+px) {
+                max-width: none;
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+    & .introductory-block {
+        margin-bottom: 145px;
+        @include mb();
+    }
+}
