@@ -592,6 +592,7 @@ button.btn-default {
 @import "../blocks/cta-block/cta-block";
 @import "../blocks/detail-info-block/detail-info-block";
 @import "../blocks/card-blog/card-blog";
+@import "../blocks/form-send-message/form-send-message";
 
 // ==== BLOCKS =====================================================
 
@@ -621,6 +622,10 @@ button.btn-default {
 	// ==== BLOG =====================================================
 	@import "#blog";
 	// ==== AND BLOG =====================================================
+	
+	// ==== BLOG DETAIL =====================================================
+	@import "#blog-detail";
+	// ==== AND BLOG DETAIL =====================================================
 	
 // ==== AND PAGES =====================================================
 

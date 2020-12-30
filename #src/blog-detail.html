@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Copres"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper blog-detail _padding-top">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+                @@include('blocks/hero/_hero.html',{
+                    "imgSrc": 'img/photo/@1x/hero-bg01.jpg',
+                    "imgSrcset": 'img/photo/@1x/hero-bg01.jpg 1x, img/photo/@2x/hero-bg01.jpg 2x',
+                    "title": 'Blog Titel',
+                    "breadcrumb": ['Home', 'Blog'],
+                    "breadcrumbLast": 'Blog Titel',
+                })
+
+                <section class="detail-info-block detail-info-block__aside-right  container">
+                    <div class="detail-info-block__aside">
+
+                        <div class="latest-news">
+                            <h4 class="latest-news__title title-4">Het laatste nieuws</h4>
+                            <ul class="latest-news__list">
+                                <li>
+                                    <a href="#" class="latest-news__item">
+                                        <div class="latest-news__item-title">Titel (Blog 1)</div>
+                                        <div class="latest-news__item-date">04 December 2020</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="latest-news__item">
+                                        <div class="latest-news__item-title">Titel (Blog 1)</div>
+                                        <div class="latest-news__item-date">04 December 2020</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="latest-news__item">
+                                        <div class="latest-news__item-title">Titel (Blog 1)</div>
+                                        <div class="latest-news__item-date">04 December 2020</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <form action="/" class="cta-block cta-block_form">
+                            <div class="cta-block__inner">
+                                <h4 class="cta-block__title title-4">Blijf op de Hoogte</h4>
+                                <div class="cta-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius arcu, non malesuada.</div>
+                                <input type="text" class="cta-block__input" placeholder="Emailaddres">    
+                                <button class="btn-default yellow _puls">Aanmelden</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="detail-info-block__content">
+                        <div class="article-head">
+                            <div class="article-head__img ibg img-box">
+                                <span>
+                                    <img src="img/photo/placeholder.jpg" alt="img">
+                                </span>
+                            </div>
+                            <div class="article-head__bottom">
+                                <div class="article-head__photo">
+                                    <span>
+                                        <img src="img/photo/author-placeholder.png" alt="img">
+                                    </span>
+                                </div>
+                                <div class="article-head__text-wrap">
+                                    <div class="article-head__name">Lucas Daan</div>
+                                    <div class="article-head__date">04 December, 2020</div>
+                                    <div class="article-head__info">
+                                        <div class="article-head__info-item">
+                                            <span>
+                                                <img src="img/icons/comment.svg" alt="icon">
+                                            </span>
+                                            24
+                                        </div>
+                                        <div class="article-head__info-item">
+                                            <span>
+                                                <img src="img/icons/show.svg" alt="icon">
+                                            </span>
+                                            60k
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail-info-block__text text-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum dignissim sed varius pulvinar mattis vel. Ullamcorper amet, sit faucibus blandit amet purus amet, accumsan suspendisse. Volutpat, tincidunt nec, aliquet nulla turpis urna felis arcu. Erat eu orci ut varius turpis erat eu. Tellus ut vivamus malesuada pellentesque at et augue. Quam laoreet senectus curabitur tellus ultricies mattis eget faucibus ut. Elementum lacus hac interdum consequat tortor sodales dolor.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum dignissim sed varius pulvinar mattis vel. Ullamcorper amet, sit faucibus blandit amet purus amet, accumsan suspendisse. Volutpat, tincidunt nec, aliquet nulla turpis urna felis arcu. Erat eu orci ut varius turpis erat eu. Tellus ut vivamus malesuada pellentesque at et augue. Quam laoreet senectus curabitur tellus ultricies mattis eget faucibus ut. Elementum lacus hac interdum consequat tortor sodales dolor.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum dignissim sed varius pulvinar mattis vel. Ullamcorper amet, sit faucibus blandit amet purus amet, accumsan suspendisse. Volutpat, tincidunt nec, aliquet nulla turpis urna felis arcu. Erat eu orci ut varius turpis erat eu. Tellus ut vivamus malesuada pellentesque at et augue. Quam laoreet senectus curabitur tellus ultricies mattis eget faucibus ut. Elementum lacus hac interdum consequat tortor sodales dolor.
+                            </p>
+                        </div>
+
+                        <div class="share-block">
+                            <div class="share-block__text">
+                                Share post on
+                            </div>
+                            <ul class="social-list">
+                                <li>
+                                    <a href="#" class="social-list__link">
+                                        <span>
+                                            <img src="img/icons/facebook.svg" alt="facebook">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-list__link">
+                                        <span>
+                                            <img src="img/icons/twitter.svg" alt="twitter">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-list__link">
+                                        <span>
+                                            <img src="img/icons/linkedin.svg" alt="linkedin">
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-list__link">
+                                        <span>
+                                            <img src="img/icons/share.svg" alt="share">
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <form action="/" class="form-send-message">
+                            <h3 class="form-send-message__title title-3">Laat een reactie achter</h3>
+                            <div class="form-send-message__inner">
+                                <div class="form-send-message__input-wrap">
+                                    <input type="text" class="input" placeholder="Naam">
+                                </div>
+                                <div class="form-send-message__input-wrap">
+                                    <input type="email" class="input" placeholder="Emailadres">
+                                </div>
+                                <div class="form-send-message__input-wrap form-send-message__input-wrap_web">
+                                    <input type="text" class="input" placeholder="Website">
+                                </div>
+                                <div class="form-send-message__textarea-wrap ">
+                                    <textarea class="textarea" placeholder="Bericht"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn-default blue arrow _puls">Verzenden</button>
+                        </form>  
+                    </div>
+                </section>
+                           
+            </main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_js.html',{})
+	</body>
+</html>

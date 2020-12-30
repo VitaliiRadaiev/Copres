@@ -20,6 +20,18 @@
         z-index: 1;
     }
 
+    &_form {
+        padding: 60px 20px;
+
+        & .cta-block__text {
+            margin-bottom: 41px;
+        }
+
+        & .btn-default {
+            width: auto !important;
+        }
+    }
+
     &__inner {
         position: relative;
         z-index: 2;
@@ -35,6 +47,30 @@
         margin-bottom: 60px;
         letter-spacing: 0.014em;
         line-height: 1.56em;
+    }
+
+    &__input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: rgba(#fff, 0.2);
+        border-radius: 12px;
+        color: #fff;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.014em;
+        padding: 19px 24px;
+        margin-bottom: 28px;
+
+        &::placeholder {
+            font-size: 18px;
+            line-height: 22px;
+
+            letter-spacing: 0.014em;
+            color: #FFFFFF;
+            opacity: 0.7;
+        }
     }
 
     & .btn-default {
