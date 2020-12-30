@@ -1,0 +1,64 @@
+.card-blog {
+
+    &__img {
+        height: 0;
+        padding-bottom: 100%;
+        margin-bottom: 37px;
+    }
+
+    &__title {
+        margin-bottom: 21px;
+    }
+
+    &__subtitle {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: normal;
+        line-height: 22px;
+        letter-spacing: 0.014em;
+        color: #A8A9B0;
+        align-items: center;
+        margin-bottom: 22px;
+    }
+
+    &__date {
+        flex: 0 0 auto;
+        margin-bottom: 10px;
+
+        &:after {
+            content: '|';
+            color: inherit;
+            margin-left: 15px;
+            margin-right: 18px;
+        }
+    }
+
+    &__info {
+        flex: 0 0 auto;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    &__info-item {
+        text-transform: uppercase;
+        &:first-child {
+            margin-right: 24px;
+        }
+
+        & > span {
+            display: inline-block;
+            width: 20px;
+
+
+            & img {
+                width: 100%;
+            }
+        }
+    }
+
+    &__text {
+        letter-spacing: 0.014em;
+        line-height: 1.556em;
+        margin-bottom: 28px;
+    }
+}

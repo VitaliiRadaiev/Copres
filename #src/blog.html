@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Copres"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper blog _padding-top">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+                @@include('blocks/hero/_hero.html',{
+                    "imgSrc": 'img/photo/@1x/hero-bg03.jpg',
+                    "imgSrcset": 'img/photo/@1x/hero-bg03.jpg 1x, img/photo/@2x/hero-bg03.jpg 2x',
+                    "title": 'Blog',
+                    "breadcrumb": ['Home'],
+                    "breadcrumbLast": 'Blog',
+                })
+
+                <section class="blog__content">
+                    <div class="container">
+                        <ul class="blog__list">
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                            <li>
+                                @@include('blocks/card-blog/_card-blog.html', {})
+                            </li>
+                        </ul>
+
+                        <nav class="pagination">
+                            <a href="#" class="pagination__btn pagination__btn_prev">prev</a>
+                            <ul class="pagination__list">
+                                <li>
+                                    <a href="#" class="pagination__link">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination__link active">2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination__link">3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination__link">4</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="pagination__link">5</a>
+                                </li>
+                            </ul>
+                            <a href="#" class="pagination__btn pagination__btn_next">next</a>
+                        </nav>
+                    </div>
+                </section>       
+            </main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_js.html',{})
+	</body>
+</html>
