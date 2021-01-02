@@ -1,0 +1,249 @@
+.contact {
+    & .hero {
+        margin-bottom: 161px;
+        @include mb();
+    }
+}
+
+.contact-main {
+    margin-bottom: 100px;
+
+    @include mb();
+
+    &__body {
+        display: flex;
+
+        @media (max-width: $md2+px) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__form {
+        flex: 1 1 auto;
+
+        @media (max-width: $md2+px) {
+           // margin-bottom: 60px;
+        }
+    }
+
+    &__info {
+        flex: 0 0 410px;
+        margin-left: 140px;
+
+        @media (max-width: 1265px) {
+            margin-left: 60px;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-left: 0;
+            flex: 0 1 100%;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+
+
+.form-contact {
+    margin-bottom: 60px;
+    &__title {
+        margin-bottom: 36px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__input-wrap {
+        margin-bottom: 28px;
+        flex: 0 1 calc(50% - 14px);
+
+        @media (max-width: 575px) {
+            flex: 0 1 100%;
+        }
+
+        &_email {
+            flex: 0 1 100%;
+        }
+    }
+
+    &__textarea-wrap {
+        flex: 0 1 100%;
+        margin-bottom: 48px;
+
+        & .textarea {
+            min-height: 240px;
+        }
+    }
+}
+
+
+
+
+.info-contact {
+
+    &__title {
+        margin-bottom: 36px;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: 28px;
+        & ~ .info-contact__title {
+            margin-top: 80px;
+        }
+    }
+
+    &__circle {
+        margin-right: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        flex: 0 0 60px;
+        width: 60px;
+        background: #FAEFCD;
+        border-radius: 50%;
+
+        & > span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(144.38deg, #FAEFCD -85.56%, rgba(250, 239, 205, 0) 90.63%), #F6C223;
+            height: 40px;
+            flex: 0 0 40px;
+            border-radius: 50%;
+
+            & > span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 24px;
+                flex: 0 0 24px;
+
+                & img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+            }
+        }
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 1.5em;
+        letter-spacing: 0.014em;
+        align-self: center;
+        & a {
+            color: $textColor;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.subscrib-block {
+    margin-bottom: 160px;
+    @include mb();
+    &__body {
+        position: relative;
+        background-color: $mainColorBlack;
+        box-shadow: 0px 12px 40px rgba(25, 26, 50, 0.1);
+        border-radius: 20px;
+
+    
+        &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: url(../img/photo/subscrib-block-decor.png) center no-repeat;
+            background-size: cover;
+        }
+    }   
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        min-height: 456px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 15px;
+        text-align: center;
+
+        @media (max-width: 575px) {
+            padding: 60px 15px;
+            min-height: 356px;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        margin-bottom: 36px;
+    }
+
+    &__text {
+        max-width: 850px;
+        margin: 0 auto 60px;
+        color: rgba(#fff, 0.8);
+
+        @media (max-width: 575px) {
+            &.text-content {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 630px;
+        margin: 0 auto;
+
+        @media (min-width: 576px) {
+            & .form-send-email__input {
+                min-height: 60px;
+                font-size: 18px;
+    
+                &::placeholder {
+                    font-size: 18px;
+                }
+            }
+    
+            & .form-send-email__btn  {
+                min-height: 60px;
+    
+                &.btn-default {
+                    min-width: 164px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+#map {
+    height: 80vh;
+    width: 100%;
+}

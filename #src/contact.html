@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Copres"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper contact _padding-top">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+                @@include('blocks/hero/_hero.html',{
+                    "imgSrc": 'img/photo/@1x/hero-bg04.jpg',
+                    "imgSrcset": 'img/photo/@1x/hero-bg04.jpg 1x, img/photo/@2x/hero-bg04.jpg 2x',
+                    "title": 'Contact',
+                    "breadcrumb": ['Home'],
+                    "breadcrumbLast": 'Contact',
+                })
+
+              <div class="contact-main">
+                  <div class="contact-main__body container">
+                      <form action="/" class="contact-main__form form-contact">
+                            <h3 class="form-contact__title title-3">Stuur ons een bericht</h3>
+                            <div class="form-contact__text text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor</div>
+
+                            <div class="form-contact__inner">
+                                <div class="form-contact__input-wrap">
+                                    <input type="text" class="input" placeholder="Voornaam">
+                                </div>
+                                <div class="form-contact__input-wrap">
+                                    <input type="text" class="input" placeholder="Achternaam">
+                                </div>
+                                <div class="form-contact__input-wrap form-contact__input-wrap_email">
+                                    <input type="email" class="input" placeholder="Emailaddres">
+                                </div>
+                                <div class="form-contact__textarea-wrap ">
+                                    <textarea class="textarea" placeholder="Bericht"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn-default blue arrow width-full">Versturen</button>
+                      </form>
+                      <div class="contact-main__info info-contact">
+                            <h4 class="info-contact__title title-4">
+                                Kom langs op locatie
+                            </h4>
+                            <div class="info-contact__item">
+                                <div class="info-contact__circle">
+                                    <span>
+                                        <span>
+                                            <img src="img/icons/marker-blue.svg" alt="marker">
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="info-contact__text">
+                                    <p>
+                                        Erfstraat 11
+                                    </p>
+                                    <p>
+                                        5405 BE Uden
+                                    </p>
+                                    <p>
+                                        Netherlands
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h4 class="info-contact__title title-4">
+                                Stel je vraag via
+                            </h4>
+                            <div class="info-contact__item">
+                                <div class="info-contact__circle">
+                                    <span>
+                                        <span>
+                                            <img src="img/icons/phone-blue.svg" alt="marker">
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="info-contact__text">
+                                    <a href="tel:+31413246687">+31 413 24 66 87</a>
+                                </div>
+                            </div>
+                            <div class="info-contact__item">
+                                <div class="info-contact__circle">
+                                    <span>
+                                        <span>
+                                            <img src="img/icons/letter-2-blue.svg" alt="marker">
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="info-contact__text">
+                                    <a href="mailto:sales@copres.eu">sales@copres.eu</a>
+                                </div>
+                            </div>
+                      </div>
+                  </div>
+              </div>  
+                      
+              <section class="subscrib-block container">
+                  <div class="subscrib-block__body">
+                      <div class="subscrib-block__inner">
+                        <h3 class="subscrib-block__title title-3">Titel (Nieuwsbrief)</h3>
+                        <div class="subscrib-block__text text-content">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor amet venenatis. Nullam nulla ipsum enim tortor aenean blandit senectus fermentum.
+                        </div>
+  
+                        <form action="#" class="subscrib-block__form form-send-email">
+                          <div class="form-send-email__inner">
+                              <input type="email" class="form-send-email__input" placeholder="Emailaddress">
+                              <button class="form-send-email__btn btn-default yellow _puls" type="submit">Aanmelden</button>
+                          </div>
+                      </form>
+                      </div>
+                  </div>
+              </section>
+
+              <div id="map" class="map"></div>
+
+            </main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+        @@include('_js.html',{})
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+        defer
+      ></script>
+	</body>
+</html>

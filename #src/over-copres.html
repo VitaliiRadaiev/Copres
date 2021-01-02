@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Copres"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper over-copres _padding-top">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+                @@include('blocks/hero/_hero.html',{
+                    "imgSrc": 'img/photo/@1x/hero-bg03.jpg',
+                    "imgSrcset": 'img/photo/@1x/hero-bg03.jpg 1x, img/photo/@2x/hero-bg03.jpg 2x',
+                    "title": 'Over Copres',
+                    "breadcrumb": ['Home'],
+                    "breadcrumbLast": 'Over Copres',
+                })
+
+                <section class="about-block">
+					<div class="container">
+						@@include('blocks/head/_head.html',{
+							"parentClass": 'about-block__head',
+							"suptitle": 'subtitel (Over Copres)',
+							"title": 'Titel (Over Copres)',
+						})
+
+						<div class="about-block__body">
+							<div class="about-block__column about-block__column_1 text-content">
+								<p><strong>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor amet venenatis. Nullam nulla ipsum enim tortor aenean blandit senectus fermentum.
+								</strong></p>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor amet venenatis. Nullam nulla ipsum enim tortor aenean blandit senectus fermentum.
+								</p>
+								<div class="about-block__text-bottom">
+									<i>Handtekening CEO</i>
+									<a href="#" class="btn-default blue">Contact</a>
+								</div>
+							</div>
+							<div class="about-block__column about-block__column_2">
+								<div class="about-block__img img-box ibg">
+									<span>
+										<img src="img/photo/placeholder.jpg" alt="img">
+									</span>
+								</div>
+							</div>
+							<div class="about-block__column about-block__column_3">
+								<ul class="about-block__list">
+									<li>
+										@@include('blocks/card-mini/_card-mini.html', {
+											"parentClass": 'about-block__card',
+											"check": '',
+											"title": 'USP 1',
+											"text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor'
+										})
+									</li>
+									<li>
+										@@include('blocks/card-mini/_card-mini.html', {
+											"parentClass": 'about-block__card',
+											"check": '',
+											"title": 'USP 2',
+											"text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor'
+										})
+									</li>
+									<li>
+										@@include('blocks/card-mini/_card-mini.html', {
+											"parentClass": 'about-block__card',
+											"check": '',
+											"title": 'USP 3',
+											"text": 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor'
+										})
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                </section>
+                
+                <section class="quote-block">
+                    <div class="quote-block__inner">
+                        <div class="quote-block__body container">
+                            <div class="quote-block__text text-content">
+                                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam lacus id nisi auctor amet venenatis. Nullam nulla ipsum enim tortor aenean blandit senectus fermentum.”
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="keypoints">
+                    <div class="container">
+                        @@include('blocks/head/_head.html',{
+							"parentClass": 'keypoints__head',
+							"suptitle": 'SUBTITEL (KEYPOINTS)',
+							"title": 'Titel (Keypoints)',
+                        })
+                        
+                        <ul class="keypoints__list">
+                            <li>
+                                <div class="card-keypoints">
+                                    <div class="card-keypoints__img ibg img-box">
+                                        <span>
+                                            <a href="#">
+                                                <img src="img/photo/placeholder.jpg" alt="img">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="card-keypoints__text-wrap">
+                                        <h4 class="card-keypoints__title title-4">Sales</h4>
+                                        <div class="card-keypoints__text text-content">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, eros, suscipit dapibus sem tempus. Quis vel, eros, dolor vulputate mauris fermentum, phasellus facilisi...
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-keypoints">
+                                    <div class="card-keypoints__img ibg img-box">
+                                        <span>
+                                            <a href="#">
+                                                <img src="img/photo/placeholder.jpg" alt="img">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="card-keypoints__text-wrap">
+                                        <h4 class="card-keypoints__title title-4">Productie</h4>
+                                        <div class="card-keypoints__text text-content">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, eros, suscipit dapibus sem tempus. Quis vel, eros, dolor vulputate mauris fermentum, phasellus facilisi...
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="card-keypoints">
+                                    <div class="card-keypoints__img ibg img-box">
+                                        <span>
+                                            <a href="#">
+                                                <img src="img/photo/placeholder.jpg" alt="img">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="card-keypoints__text-wrap">
+                                        <h4 class="card-keypoints__title title-4">Ontwikkeling</h4>
+                                        <div class="card-keypoints__text text-content">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci, eros, suscipit dapibus sem tempus. Quis vel, eros, dolor vulputate mauris fermentum, phasellus facilisi...
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn-default blue">Bekijk Onze Oplossingen</a>
+                    </div>
+                </section>
+                          
+                
+                @@include('blocks/action-block/_action-block.html',{})
+            </main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_js.html',{})
+	</body>
+</html>
