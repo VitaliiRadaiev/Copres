@@ -116,6 +116,7 @@ $(document).ready(function () {
 	@@include('##solution-slider.js');
 	@@include('##testimonials-slider.js');
 	@@include('##review-block.js');
+	@@include('##vacatures-list.js');
 	
 	@@include('../blocks/action-block/action-block.js');
 

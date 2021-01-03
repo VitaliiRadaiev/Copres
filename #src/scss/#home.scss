@@ -692,6 +692,23 @@
         }
     }
 
+}
+
+.pagination-style {
+
+   &.pagination-style_blue {
+    & .swiper-pagination {
+
+
+        & .swiper-pagination-bullet  {
+            background: rgba(#000, 0.2);
+            &.swiper-pagination-bullet-active {
+                background: linear-gradient(132.12deg, #487FF4 -22.87%, rgba(72, 127, 244, 0) 83.62%), #194299;
+            }
+        }
+    }
+   } 
+
     & .swiper-pagination {
         position: static;
 
@@ -708,8 +725,6 @@
         }
     }
 }
-
-
 
 
 
