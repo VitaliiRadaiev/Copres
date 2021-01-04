@@ -1,0 +1,29 @@
+.vacatures-detail {
+    & .hero {
+        margin-bottom: 161px;
+        @include mb();
+    }
+
+    & .detail-info-block {
+        margin-bottom: 160px;
+        @include mb();
+    }
+
+    & .detail-info-block__text {
+        &.text-content {
+            padding-right: 0;
+            margin-bottom: 74px;
+            & p + h4 {
+                margin-top: 72px;
+            }
+
+            & h4 {
+
+            }
+
+            & + hr {
+                margin-bottom: 82px;
+            }
+        }
+    }
+}

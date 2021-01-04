@@ -528,7 +528,22 @@ button.btn-default {
 	}
 
 	& ul {
-
+		margin-bottom: 55px;
+		& > li {
+			position: relative;
+			padding-left: 19px;
+			margin-bottom: 18px;
+			&:before {
+				position: absolute;
+				content: '';
+				top: 8px;
+				left: 0;
+				width: 8px;
+				height: 8px;
+				background: linear-gradient(132.12deg, #487FF4 -22.87%, rgba(72, 127, 244, 0) 83.62%), #194299;
+				border-radius: 50%;	
+			}
+		}
 	}
 
 	& ol {}
@@ -637,6 +652,10 @@ button.btn-default {
 	
 	// ==== VACATURES =====================================================
 	@import "#vacatures";
+	// ==== AND VACATURES =====================================================
+	
+	// ==== AND VACATURES =====================================================
+	@import "#vacatures-detail";
 	// ==== AND VACATURES =====================================================
 	
 // ==== AND PAGES =====================================================

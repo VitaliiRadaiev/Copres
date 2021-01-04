@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title": "Copres"
+	})
+	<body>
+		<!-- == WRAPPER ================== -->
+		<div class="wrapper vacatures-detail _padding-top">
+			<!-- == TOP LINE ================== -->
+			@@include('_header.html',{})
+			<!-- == // TOP LINE ================== -->
+
+			<!-- == PAGE CONTENT ================== -->
+			<main class="page">
+                @@include('blocks/hero/_hero.html',{
+                    "imgSrc": 'img/photo/@1x/hero-bg03.jpg',
+                    "imgSrcset": 'img/photo/@1x/hero-bg03.jpg 1x, img/photo/@2x/hero-bg03.jpg 2x',
+                    "title": 'Vacature Titel',
+                    "breadcrumb": ['Home', 'Vacatures'],
+                    "breadcrumbLast": 'Vacature Titel',
+                })
+
+                <section class="detail-info-block detail-info-block__aside-right  container">
+                    <div class="detail-info-block__aside">
+
+                        <div class="latest-news">
+                            <h4 class="latest-news__title title-4">Meer vacatures</h4>
+                            <ul class="latest-news__list">
+                                <li>
+                                    <a href="#" class="latest-news__item">
+                                        <div class="latest-news__item-title">Titel (Vacature)</div>
+                                        <div class="latest-news__item-date">Full-Time, Uden</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="latest-news__item">
+                                        <div class="latest-news__item-title">Titel (Vacature)</div>
+                                        <div class="latest-news__item-date">Full-Time, Uden</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="latest-news__item">
+                                        <div class="latest-news__item-title">Titel (Vacature)</div>
+                                        <div class="latest-news__item-date">Full-Time, Uden</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <form action="/" class="cta-block cta-block_form">
+                            <div class="cta-block__inner">
+                                <h4 class="cta-block__title title-4">Blijf op de Hoogte</h4>
+                                <div class="cta-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius arcu, non malesuada.</div>
+                                <input type="text" class="cta-block__input" placeholder="Emailaddres">    
+                                <button class="btn-default yellow _puls">Aanmelden</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="detail-info-block__content">
+                        <div class="detail-info-block__text text-content">
+                            <h3>Titel</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non condimentum ipsum id pellentesque congue adipiscing integer ipsum sit. Ullamcorper dapibus velit malesuada facilisis mattis lectus. Lacus ipsum, massa nibh nullam velit, nulla leo. Posuere volutpat, ultricies ut dignissim. In sem magnis quis pellentesque amet parturient morbi. Lorem pretium dictum justo nec malesuada nibh vitae. Tristique etiam diam duis nec, sed ipsum eget ornare.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non condimentum ipsum id pellentesque congue adipiscing integer ipsum sit. Ullamcorper dapibus velit malesuada facilisis mattis lectus. Lacus ipsum, massa nibh nullam velit, nulla leo. Posuere volutpat, ultricies ut dignissim. In sem magnis quis pellentesque amet parturient morbi. Lorem pretium dictum justo nec malesuada nibh vitae. Tristique etiam diam duis nec, sed ipsum eget ornare.
+                            </p>
+
+                            <h4>Subtitel</h4>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            </ul>
+
+                            <h4>Subtitel</h4>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <form action="/" class="form-send-message dragndrop">
+                            <h3 class="form-send-message__title title-3">Sollicitatieformulier</h3>
+                            <div class="form-send-message__inner">
+                                <div class="form-send-message__input-wrap">
+                                    <input type="text" class="input" placeholder="Naam">
+                                </div>
+                                <div class="form-send-message__input-wrap">
+                                    <input type="email" class="input" placeholder="Emailadres">
+                                </div>
+                                <div class="form-send-message__input-wrap form-send-message__input-wrap_web">
+                                    <input autocomplete="off" type="text" class="input _mask" placeholder="Telefoonnummer" data-mask="+1(99)999-99-99">
+                                </div>
+                                <div class="form-send-message__textarea-wrap ">
+                                    <textarea class="textarea" placeholder="Motivatie"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-send-message__upload">
+                                <div class="form-send-message__text">CV Uploaden</div>
+                                <div class="form-send-message__dragndrop">
+                                    <!-- <div class="form-send-message__dragndrop-border">
+                                        <img src="img/icons/Rectangle.svg" alt="">
+                                    </div> -->
+                                    <input class="form-send-message__dragndrop-input" type="file" name="files[]" id="file"  multiple />
+                                    <label for="file" class="form-send-message__dragndrop-label">
+                                        <div class="form-send-message__dragndrop-icon">
+                                            <img src="img/icons/upload.svg" alt="upload">
+                                        </div>
+                                        <div class="form-send-message__dragndrop-text">
+                                            Drag files here to upload or,
+                                            <a href="#">browse</a> for a file on your computer
+                                        </div>
+                                    </label>
+                                  </div>
+                                <div class="form-send-message__format"><i>*JPG, PDF of PNG</i></div>
+                            </div>
+                            <button class="btn-default blue arrow _puls">Verzenden</button>
+                        </form>  
+
+                    </div>
+                </section>
+                           
+            </main>
+			<!-- == // PAGE CONTENT ================== -->
+
+			<!-- == FOOTER ================== -->
+			@@include('_footer.html',{})
+			<!-- == // FOOTER ================== -->
+		</div>
+		<!-- == // WRAPPER ================== -->
+		@@include('_js.html',{})
+	</body>
+</html>

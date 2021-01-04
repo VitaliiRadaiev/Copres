@@ -337,7 +337,7 @@
         display: block;
         padding: 32px 10px 31px;
         margin: 0 -10px;
-        transform: all .2s ease;
+        transition: all .2s ease;
 
         @media (min-width: 992px) {
             &:hover {

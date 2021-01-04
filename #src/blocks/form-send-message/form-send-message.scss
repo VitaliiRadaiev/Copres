@@ -2,6 +2,13 @@
     margin-bottom: 160px;
     @include mb();
 
+    &.dragndrop {
+        margin-bottom: 0;
+        & .form-send-message__textarea-wrap {
+            margin-bottom: 47px;
+        }
+    }
+
     &__title {
         margin-bottom: 36px;
     }
@@ -41,7 +48,118 @@
         width: 100%;
         max-width: 357px;
     }
+
+    &__upload {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+        margin-left: 9px;
+        margin-bottom: 69px;
+
+        @media (max-width: $md3+px) {
+            margin-left: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+        line-height: 22px;
+        letter-spacing: 0.014em;
+        margin-right: 40px;
+        flex: 0 0 auto;
+        margin-bottom: 12px;
+    }
+
+    &__dragndrop {
+        margin-bottom: 12px;
+        min-width: 300px;
+        margin-right: 28px;
+        max-width: 384px;
+        position: relative;
+        @media (max-width: $md4+px) {
+            margin-right: 0;
+        }
+    }
+
+    &__dragndrop-border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        & img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__dragndrop-input {
+        display: none;
+    }
+
+    &__dragndrop-label {
+        display: flex;
+        align-items: center;
+        background: #FAFBFD;
+        //border: 1px dashed #194299;
+        box-sizing: border-box;
+        border-radius: 12px;
+        padding: 20px 27px;
+       // background-image: url("data:image/svg+xml;utf8,<svg width='384' height='92' viewBox='0 0 384 92' fill='none' xmlns='http://www.w3.org/2000/svg'><rect x='0.5' y='0.5' width='383' height='91' rx='11.5' fill='#FAFBFD' stroke='#194299' stroke-dasharray='10 10'/></svg>");
+        background-image: url('../../img/icons/Rectangle.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        @media (max-width: $md4+px) {
+            padding: 12px 18px;
+        }
+    }
+
+    &__dragndrop-icon {
+        $size: 40;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: $size+px;
+        height: $size+px;
+        margin-right: 20px;
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            height: auto;
+            width: auto;
+            position: static;
+        }
+    }
+
+    &__dragndrop-text {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.014em;
+        color: #A8A9B0;
+
+        & a {
+            color: $mainColorBlue;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__format {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.014em;
+        color: #A8A9B0;
+        margin-bottom: 12px;
+    }
 }
+
 
 
 
