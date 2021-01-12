@@ -42,7 +42,7 @@ $(document).ready(function () {
 	@@include('forms.js');
 
 
-	// === Проверка, поддержка браузером формата webp ==================================================================
+	// === is webp ==================================================================
 
 	function testWebP(callback) {
 
@@ -62,7 +62,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// === // Проверка, поддержка браузером формата webp ==================================================================
+	// === // is webp ==================================================================
 
 		// ==== ADD PADDING-TOP ================================
 		{
@@ -133,6 +133,7 @@ const createHTMLMapMarker = ({
 		this.latlng = args.latlng;
 		this.html = args.html;
 		this.setMap(args.map);
+		this.imgSize = args.imgSize;
 	  }
   
 	  createDiv() {
@@ -154,19 +155,13 @@ const createHTMLMapMarker = ({
 	  positionDiv() {
 		const point = this.getProjection().fromLatLngToDivPixel(this.latlng);
 		let offset = 400;
-		console.log(point);
-		
+	
 		if (point) {
-		  this.div.style.left = `${-218}px`;
-		  this.div.style.top = `${-302}px`;
-		  this.div.style.width = `${435}px`;
-		  this.div.style.height = `${302}px`;
+		  this.div.style.left = `${-(this.imgSize.width / 2)}px`;
+		  this.div.style.top = `${-(this.imgSize.height)}px`;
+		  this.div.style.width = `${this.imgSize.width}px`;
+		  this.div.style.height = `${this.imgSize.height}px`;
 		}
-	  }
-
-	  size() {
-		  console.log('test');
-		  
 	  }
   
 	  draw() {
@@ -213,15 +208,9 @@ const createHTMLMapMarker = ({
 			lng: 5.657372,
 		}
 
-		// Функция initMap которая отрисует карту на странице
 		function initMap() {
-
-			// В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
 			map = new google.maps.Map(document.getElementById('map'), {
-				// При создании объекта карты необходимо указать его свойства
-				// center - определяем точку на которой карта будет центрироваться
 				center: {lat: center.lat, lng: center.lng},
-				// zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
 
 				zoom: 13,
 				panControl: false,
@@ -474,43 +463,18 @@ const createHTMLMapMarker = ({
 				  ],
 				scrollwheel: false,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
-				// Добавляем свои стили для отображения карты
-				//styles: 
 			});
-
-			var image = {
-				url:'img/icons/address.png',
-				// This marker is 20 pixels wide by 32 pixels high.
-				 size: new google.maps.Size(435, 302),
-				// // The origin for this image is (0, 0).
-				// origin: new google.maps.Point(0, 0),
-				// // The anchor for this image is the base of the flagpole at (0, 32).
-				// anchor: new google.maps.Point(0, 0),
-			  };
-
-			// Создаем маркер на карте
-			// var marker = new google.maps.Marker({
-
-			// 	// Определяем позицию маркера
-			//     position: {lat: markerPosition.lat, lng: markerPosition.lng},
-
-			//     // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
-			//     map: map,
-
-			//     // Пишем название маркера - появится если навести на него курсор и немного подождать
-			//     title: '',
-			//     label: '',
-		
-			//     // Укажем свою иконку для маркера
-			//     icon: image,
-			// });
 
 			var latLng = new google.maps.LatLng(markerPosition.lat, markerPosition.lng);
 
 			let marker = createHTMLMapMarker({
 				latlng: latLng,
 				map: map,
-				html: `<img id="parrot" src="img/icons/address@2x.png">`
+				html: `<img id="parrot" src="${isMap.dataset.imgurl}">`,
+				imgSize: {
+					width: isMap.dataset.imgsizewidth,
+					height: isMap.dataset.imgsizeheight,
+				}
 			  });
 
 			console.dir(marker)
