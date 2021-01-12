@@ -1212,6 +1212,80 @@ function inputs_init(inputs) {
 
 });
 
+
+const createHTMLMapMarker = ({
+	OverlayView = google.maps.OverlayView,
+	...args
+  }) => {
+	class HTMLMapMarker extends OverlayView {
+	  constructor() {
+		super();
+		this.latlng = args.latlng;
+		this.html = args.html;
+		this.setMap(args.map);
+	  }
+  
+	  createDiv() {
+		this.div = document.createElement("div");
+		this.div.style.position = "absolute";
+		if (this.html) {
+		  this.div.innerHTML = this.html;
+		}
+		google.maps.event.addDomListener(this.div, "click", event => {
+		  google.maps.event.trigger(this, "click");
+		});
+	  }
+  
+	  appendDivToOverlay() {
+		const panes = this.getPanes();
+		panes.overlayImage.appendChild(this.div);
+	  }
+  
+	  positionDiv() {
+		const point = this.getProjection().fromLatLngToDivPixel(this.latlng);
+		let offset = 400;
+		console.log(point);
+		
+		if (point) {
+		  this.div.style.left = `${-218}px`;
+		  this.div.style.top = `${-302}px`;
+		  this.div.style.width = `${435}px`;
+		  this.div.style.height = `${302}px`;
+		}
+	  }
+
+	  size() {
+		  console.log('test');
+		  
+	  }
+  
+	  draw() {
+		if (!this.div) {
+		  this.createDiv();
+		  this.appendDivToOverlay();
+		}
+		this.positionDiv();
+	  }
+  
+	  remove() {
+		if (this.div) {
+		  this.div.parentNode.removeChild(this.div);
+		  this.div = null;
+		}
+	  }
+  
+	  getPosition() {
+		return this.latlng;
+	  }
+  
+	  getDraggable() {
+		return false;
+	  }
+	}
+  
+	return new HTMLMapMarker();
+  };
+
 {
 
 
@@ -1494,22 +1568,42 @@ function inputs_init(inputs) {
 				//styles: 
 			});
 
+			var image = {
+				url:'img/icons/address.png',
+				// This marker is 20 pixels wide by 32 pixels high.
+				 size: new google.maps.Size(435, 302),
+				// // The origin for this image is (0, 0).
+				// origin: new google.maps.Point(0, 0),
+				// // The anchor for this image is the base of the flagpole at (0, 32).
+				// anchor: new google.maps.Point(0, 0),
+			  };
+
 			// Создаем маркер на карте
-			var marker = new google.maps.Marker({
+			// var marker = new google.maps.Marker({
 
-				// Определяем позицию маркера
-			    position: {lat: markerPosition.lat, lng: markerPosition.lng},
+			// 	// Определяем позицию маркера
+			//     position: {lat: markerPosition.lat, lng: markerPosition.lng},
 
-			    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
-			    map: map,
+			//     // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+			//     map: map,
 
-			    // Пишем название маркера - появится если навести на него курсор и немного подождать
-			    title: '',
-			    label: '',
+			//     // Пишем название маркера - появится если навести на него курсор и немного подождать
+			//     title: '',
+			//     label: '',
+		
+			//     // Укажем свою иконку для маркера
+			//     icon: image,
+			// });
 
-			    // Укажем свою иконку для маркера
-			    icon: 'img/icons/address.png',
-			});
+			var latLng = new google.maps.LatLng(markerPosition.lat, markerPosition.lng);
+
+			let marker = createHTMLMapMarker({
+				latlng: latLng,
+				map: map,
+				html: `<img id="parrot" src="img/icons/address@2x.png">`
+			  });
+
+			console.dir(marker)
 
 			var options = {
 				zoom: 10,
