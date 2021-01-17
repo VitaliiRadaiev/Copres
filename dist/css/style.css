@@ -3636,11 +3636,11 @@ hr {
 }
 
 .partners {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
-.partners__list {
-  padding-bottom: 40px;
+.partners__list .swiper-pagination {
+  margin-top: 20px;
 }
 
 .partners__list .swiper-slide {

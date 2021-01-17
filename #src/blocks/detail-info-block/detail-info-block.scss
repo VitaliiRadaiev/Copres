@@ -280,7 +280,7 @@
 
 
 .partners {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
 
     @media (max-width: $md3+px) {
         margin-bottom: 60px;
@@ -291,7 +291,9 @@
     }
 
     &__list {
-        padding-bottom: 40px;
+        & .swiper-pagination {
+            margin-top: 20px;
+        }
         & .swiper-slide {
             padding: 0 10px;
         }
