@@ -280,7 +280,7 @@
 
 
 .partners {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 
     @media (max-width: $md3+px) {
         margin-bottom: 60px;
@@ -291,25 +291,15 @@
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-
-        & > li {
-            flex: 0 1 20%;
-            padding: 0px;
-            text-align: center;
-
-            @media (max-width: $md3+px) {
-                flex: 0 1 33.333%;
-                margin-bottom: 20px;
-            }
+        padding-bottom: 40px;
+        & .swiper-slide {
+            padding: 0 10px;
+        }
 
             & img {
                 max-width: 100%;
                 max-height: 100%;
             }
-        }
     }
 }
 

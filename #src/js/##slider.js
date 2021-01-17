@@ -3,7 +3,6 @@
     console.log('test')
 	if(slider.length>0) {
 		slider.forEach(item => {
-            console.log(item)
 			var mySwiper = new Swiper(item.querySelector('.swiper-container'), {
 			slidesPerView:1,
 			effect: 'fade',

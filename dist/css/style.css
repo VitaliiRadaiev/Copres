@@ -3636,29 +3636,18 @@ hr {
 }
 
 .partners {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .partners__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  padding-bottom: 40px;
 }
 
-.partners__list > li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 20%;
-          flex: 0 1 20%;
-  padding: 0px;
-  text-align: center;
+.partners__list .swiper-slide {
+  padding: 0 10px;
 }
 
-.partners__list > li img {
+.partners__list img {
   max-width: 100%;
   max-height: 100%;
 }
@@ -6778,13 +6767,6 @@ hr {
 
   .partners {
     margin-bottom: 60px;
-  }
-
-  .partners__list > li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 33.333%;
-            flex: 0 1 33.333%;
-    margin-bottom: 20px;
   }
 
   .form-send-message {
