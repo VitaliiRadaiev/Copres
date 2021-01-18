@@ -1187,11 +1187,14 @@ if(partnersList) {
         spaceBetween: 0,
         speed: 800,
         watchSlidesVisibility: true,
+        loop: true,
         pagination: {
 		el: partnersList.querySelector('.swiper-pagination'),
             clickable: true,
-           // dynamicBullets: true,
-          // hideOnClick: false,
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
         },
         on: {
             resize: function(swiper) {
