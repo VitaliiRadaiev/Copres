@@ -1,4 +1,11 @@
 .oplossingen {
+
+
+    & .introductory-block{
+        margin-bottom: 124px;
+        @include mb();
+    }
+
     &__content {
         margin-bottom: 41px;
 
@@ -28,3 +35,5 @@
         }
     }
 }
+
+

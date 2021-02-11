@@ -1,0 +1,106 @@
+.tabs-block {
+    margin-bottom: 207px;
+    @include mb();
+
+    &__body {
+
+        & .swiper-slide {
+            height: auto;
+            width: auto;
+        }
+    }
+
+    &__item {
+        background: #FFFFFF;
+        border: 1px solid rgba(168, 169, 176, 0.4);
+        box-sizing: border-box;
+        border-radius: 12px;
+        text-align: center;
+        display: block;
+        padding: 24px 8px;
+        width: 172px;
+        min-height: 184px;
+        height: 100%;
+        transition: all .2s ease;
+        word-wrap: break-word;
+        
+        @media (min-width: 992px) {
+            &:hover {
+                background-color: rgba($mainColorBlue, 0.7);
+
+                & .tabs-block__item-circle {
+                    background: #FAEFCD;
+
+                    & > span {
+                        background-color: #F6C223;
+                    }
+                }
+
+                & .tabs-block__item-text {
+                    color: #fff;
+                }
+            }
+        }
+
+        &._active {
+            background-color: $mainColorBlue !important;
+
+            & .tabs-block__item-circle {
+                background: #FAEFCD;
+
+                & > span {
+                    background-color: #F6C223;
+                }
+            }
+
+            & .tabs-block__item-text {
+                color: #fff;
+            }
+        }
+    }
+
+    &__item-circle {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 18px;
+        height: 68px;
+        width: 68px;
+        background: rgba(168, 169, 176, 0.2);
+       // background: #FAEFCD;
+        border-radius: 50%;
+        transition: all .2s ease;
+
+        & > span {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 52px;
+            height: 52px;
+            z-index: 1;
+            background: rgba(#A8A9B0, 0.4);
+           // background-color: #F6C223;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .2s ease;
+            padding: 6px;
+    
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    
+    }
+
+    &__item-text {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.028em;
+        color: #121B2F;
+    }
+}

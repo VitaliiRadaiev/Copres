@@ -395,7 +395,7 @@ hr {
     font-size: 18px;
     line-height: 1.1em;
     letter-spacing: 0.014em;
-
+	cursor: pointer;
     &.yellow {
         background-color: $decorColorYellow;
         border: none;
@@ -617,6 +617,7 @@ button.btn-default {
 @import "../blocks/detail-info-block/detail-info-block";
 @import "../blocks/card-blog/card-blog";
 @import "../blocks/form-send-message/form-send-message";
+@import "../blocks/tabs-block/tabs-block";
 
 // ==== BLOCKS =====================================================
 

@@ -857,3 +857,232 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+.contact-block {
+    margin-bottom: 159px;
+    @include mb();
+
+
+    &__body {
+        background: $mainColorBlack;
+        box-shadow: 0px 12px 40px rgba(25, 26, 50, 0.1);
+        border-radius: 20px;
+        position: relative;
+        padding: 74px 60px 41px 60px;
+
+        @media (max-width: $md2+px) {
+            padding: 50px 30px 30px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 60px;
+            right: 0;
+            width: 180px;
+            height: 320px;
+            z-index: 1;
+            background: url(../img/photo/solution-list-decor.png) center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__head {
+        &.head {
+            margin-bottom: 36px;
+            & .head__suptitle {
+                color: rgba(#fff ,0.5);
+
+                &:before {
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+100 */
+                    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+                }
+            }
+            & .head__title {
+                color: $titleColor1;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 60px;
+        &.text-content {
+            color: rgba(#fff ,0.8);
+            
+            & p {
+                
+                color: rgba(#fff ,0.8);
+                @media (max-width: $md4+px) {
+                    font-size: 16px;
+                }
+            }
+
+        }
+
+        @media (max-width: $md4+px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+        justify-content: center;
+
+        @media (max-width: $md2+px) {
+            mrgin: 0 -10px;
+        }
+    }
+
+    &__info-item {
+        padding: 0 20px;
+        margin-bottom: 40px;
+        flex: 0 1 33.333%;
+
+        @media (max-width: 1267px) {
+            flex: 0 1 50%;
+        }
+
+        @media (max-width: $md2+px) {
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $md3+px) {
+            flex: 0 1 100% !important;
+        }
+
+        &._is-hulf {
+            flex: 0 1 50%;
+
+            & .info-card {
+
+                @media (min-width: 768px) {
+                    &:before {
+                        display: none;
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+
+.info-card {
+    background: #414959;
+    box-shadow: 0px 12px 40px rgba(25, 26, 50, 0.1);
+    border-radius: 8px;
+    padding: 25px 32px 25px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 146px;
+
+    @media (max-width: $md4+px) {
+        padding: 15px 15px 15px;
+        min-height: 110px;
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height:60%;
+        background: linear-gradient(144.06deg, #E3ECFF -73.06%, rgba(227, 236, 255, 0) 71.3%), #487FF4;
+        border-radius: 0px 6px 6px 0px;
+    }
+
+    &__circle {
+        display: inline-block;
+        position: relative;
+        height: 60px;
+        width: 60px;
+        background: #FAEFCD;
+        border-radius: 50%;
+        flex: 0 0 60px;
+        margin-right: 32px;
+
+        @media (max-width: $md4+px) {
+            margin-right: 20px;
+
+            height:45px;
+            width: 45px;
+            flex: 0 0 45px;
+        }
+
+        & > span {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 48px;
+            height: 48px;
+            z-index: 1;
+            background-color: #F6C223;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: $md4+px) {
+                width: 38px;
+                height: 38px;
+                padding: 7px;
+            }
+
+            & img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: 0.014em;
+        color: #FFFFFF;
+
+        @media (max-width: $md4+px) {
+           font-size: 14px;
+        }
+
+        & strong {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 32px;
+            letter-spacing: 0.028em;
+            color: #FFFFFF;
+
+            @media (max-width: $md4+px) {
+               font-size: 18px;
+            }
+        }
+    }
+}

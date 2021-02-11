@@ -120,6 +120,7 @@ $(document).ready(function () {
 	@@include('##partners.js');
 	
 	@@include('../blocks/action-block/action-block.js');
+	@@include('../blocks/tabs-block/tabs-block.js');
 
 });
 

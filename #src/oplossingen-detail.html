@@ -256,6 +256,69 @@
                     </div>
                 </section>
 
+                <section class="download-block">
+                    <div class="container">
+                        <form action="#" class="download-block__body">
+                            <div class="download-block__img ibg" id="formPreview">
+                                <img src="img/icons/download.svg" alt="" class="download-block__img-download">
+                            </div>
+                            <div class="download-block__main">
+                                <h3 class="download-block__title title-3">
+                                    Download onze productcatalogus
+                                </h3>
+                                <div class="download-block__text text-content">
+                                    Si ergo illa tantum fasidium compesce contra naturalem usum habili, quem
+                                </div>
+                                <div class="download-block__btn-wrap">
+                                    <div class="download-block__input-wrap">
+                                        <input id="formImage" accept=".jpg, .png, .gif," type="file" name="image" class="file__input">
+                                        <div class="download-block__btn btn-default blue">Direct downloaden</div>
+                                    </div>
+    
+                                    <button class="btn-default" type="submit">Bekijken</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <script>
+                            	
+                                const formImage = document.getElementById('formImage');
+                                
+                                const formPreview = document.getElementById('formPreview');
+
+                  
+                                formImage.addEventListener('change', () => {
+                                    uploadFile(formImage.files[0]);
+                                });
+
+                                function uploadFile(file) {
+                                    
+                                    // if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+                                    //     alert('Разрешены только изображения.');
+                                    //     formImage.value = '';
+                                    //     return;
+                                    // }
+                                  
+                                    // if (file.size > 2 * 1024 * 1024) {
+                                    //     alert('Файл должен быть менее 2 МБ.');
+                                    //     return;
+                                    // }
+                                    console.log(file);
+                                    
+                                    var reader = new FileReader();
+                                    reader.onload = function (e) {
+                                        formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+                                    };
+                                    reader.onerror = function (e) {
+                                        alert('Ошибка');
+                                    };
+                                    reader.readAsDataURL(file);
+                                }
+
+                        </script>
+                    </div>
+                </section>
+
                 @@include('blocks/action-block/_action-block.html',{})
 
                 <section class="partners pagination-style pagination-style_blue">
