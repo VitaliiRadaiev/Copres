@@ -26,7 +26,7 @@
         
         @media (min-width: 992px) {
             &:hover {
-                background-color: rgba($mainColorBlue, 0.7);
+                background-color: $mainColorBlue;
 
                 & .tabs-block__item-circle {
                     background: #FAEFCD;
