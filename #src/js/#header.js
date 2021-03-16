@@ -1,15 +1,24 @@
 {
+   
+   
+   
     let dropDown = document.querySelectorAll('._drop-down');
     if(dropDown.length>0) {
-        dropDown.forEach(item => {
-            item.addEventListener('click', (e) => {
-                if(document.documentElement.clientWidth < 1023) {
-                    e.preventDefault();
-                    item.classList.toggle('_active');
-                    _slideToggle(item.nextElementSibling);
-                }
+        if(document.documentElement.clientWidth < 1024) {
+            dropDown.forEach(item => {
+                let span = document.createElement('span');
+                span.className = '_drop-down-mobile';
+
+                span.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        span.classList.toggle('_open');
+                        _slideToggle(span.nextElementSibling);
+
+                })
+
+                item.after(span);
             })
-        })
+        } 
     }
 }
 

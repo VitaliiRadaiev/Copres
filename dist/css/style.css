@@ -6803,11 +6803,55 @@ hr {
 
   .menu__list {
     display: block;
-    text-align: center;
+  }
+
+  .menu__list > li {
+    position: relative;
+  }
+
+  .menu__list > li > span._drop-down-mobile {
+    border: 1px solid #194299;
+    border-radius: 5px;
+    width: 50px;
+    height: 25px;
+    margin-left: auto;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
+
+  .menu__list > li > span._drop-down-mobile._open:after {
+    -webkit-transform: scale(1, -1);
+        -ms-transform: scale(1, -1);
+            transform: scale(1, -1);
+  }
+
+  .menu__list > li > span._drop-down-mobile:after {
+    font-family: 'icomoon' !important;
+    content: "\e907";
+    color: #A8A9B0;
+    font-size: 0.6em;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
   }
 
   .menu__link {
     font-size: 20px;
+    padding-right: 60px;
+  }
+
+  .menu__link._drop-down:after {
+    display: none;
   }
 
   .menu__sublist {
